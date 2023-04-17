@@ -2,7 +2,8 @@ const express = require('express')
 const connect = require("./config/db")
 const Errorhandler = require("./middleware/errorhandler")
 const app = express();
-// const products = require("./routes/products");
+const signup = require("./routes/signup");
+const login = require("./routes/login")
 
 const cors = require("cors")
 
@@ -16,8 +17,8 @@ app.use(cors())
 
 
 
-// app.use("/products", products );
-
+app.use("/signup", signup );
+app.use("/login", login );
 
 
 app.use(Errorhandler);
