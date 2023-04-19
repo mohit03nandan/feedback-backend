@@ -19,8 +19,6 @@ const applications = new mongoose.Schema({
 });
 
 
-
-
 const signup = mongoose.model("signup", Signup);
 const application = mongoose.model("application",applications )
 
