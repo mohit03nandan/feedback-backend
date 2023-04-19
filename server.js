@@ -4,6 +4,7 @@ const Errorhandler = require("./middleware/errorhandler")
 const app = express();
 const signup = require("./routes/signup");
 const login = require("./routes/login")
+const application = require("./routes/appication")
 
 const cors = require("cors")
 
@@ -19,7 +20,7 @@ app.use(cors())
 
 app.use("/signup", signup );
 app.use("/login", login );
-
+app.use("/application", application );
 
 app.use(Errorhandler);
 
